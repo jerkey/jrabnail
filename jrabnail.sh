@@ -105,6 +105,7 @@ do
   fi
 
   thumb=thumbs/`echo $file | { IFS="."; read a x ; echo $a ;}`_th.$output
+  mogrify -auto-orient $file
   convert -verbose -quality $quality -thumbnail $width $file $thumb |
   { IFS=">x+ " ; read ; read ; read x x x x x width height x
   echo "<a href=\"$file\"><img alt=\"$file\" src=\"$thumb\" border=\"$border\" width=\"$width\" height=\"$height\"></a>" \
