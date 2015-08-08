@@ -12,6 +12,11 @@
 # The work below is hereby placed in the public domain. This software is
 # free as in thought; do with it what you will.
 
+# rabnail was renamed to jrabnail after jake at spaz dot org added some
+# more features, like a test to see if we created index.html before 
+# literally doing rm index*.html
+# https://github.com/jerkey/jrabnail
+
 # BUGS: Color may be a hex triplet, but the # must be escaped as: -c \#ffffff.
 # No test for presence of user-specified files; lots of ugliness if files do
 # not exist. Default text colors are invisible on some backgrounds.
